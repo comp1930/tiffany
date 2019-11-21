@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My BCIT Project</title>
+    <meta name="comp1930 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- Bootstrap for Mobile-first                                                 -->
+    <!-- -------------------------------------------------------------------------- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- Add Firebase products that you want to use                                 -->
+    <!-- -------------------------------------------------------------------------- -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <!------------------------------------------------------------------------------>
+    <!-- Optional styles and scripts of your own                                  -->
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <!-- <script src="scripts/script.js"></script> -->
+    <!------------------------------------------------------------------------------>
+
+    <!------------------------------------------------------------------------------>
+    <!-- The following code connects your web app to your Firebase project        -->
+    <!------------------------------------------------------------------------------>
+    <script src="firebase_config_carly.js"> </script>
+</head>
+
+<body>
+    <h1> Hello CST!</h1>
+    <h1> Welcome to the Quiz</h1>
+    <br>
+
+    <!----------------------------------->
+    <!-- Create a form                 -->
+    <!----------------------------------->
+    <div>
+        <form id="myform">
+            <p> “What type of school work will you mainly be using the device for?”  </p>
+            <p> a)  mostly coding;  b)mostly word or excel;  c)mostly browser based applications </p>
+            <input type="text" id="q0">
+            <br>
+            <p> “How frequently will you bring this device to school?” </p>
+            <p> a) once a week, if any; b)  2-3 times a week;  c)daily; </p>
+            <input type="text" id="q1">
+            <br>
+            <p> "Will you be using the device more heavily for (hobbies outside of school work)?" </p>
+            <p> a) Gaming;  b) Video Editing;   c)Photography;   d)Not much. </p>
+            <input type="text" id="q2">
+            <br>
+            <input type="submit">
+        </form>
+    </div>
+    <br>
+    <div id="results">
+    </div>
+
+    <!----------------------------------------------->
+    <!--   All my own javascript stuff goes here   -->
+    <!----------------------------------------------->
+    <script src="application.js"></script>
+    <script>
+        createUser();
+        setFormListener("myform");
+    </script>
+</body>
+
+</html>
